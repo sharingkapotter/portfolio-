@@ -178,4 +178,11 @@ export const projects = [
     github: "https://github.com/sharingkapotter/llm-security-assessment",
     type: "AI Security",
   },
+  {
+  title: "JMeter Performance Testing Framework",
+  description: "Reusable Apache JMeter framework for REST API performance testing. Features CSV data-driven tests, response assertions, User Defined Variables for environment switching, non-GUI CI/CD execution, and HTML dashboard reporting.",
+  tech: ["JMeter", "Java", "CSV Data-Driven", "REST API", "CI/CD", "HTML Reports"],
+  github: "https://github.com/sharingkapotter/jmeter-performance-framework",
+  type: "Performance Testing",
+  },
 ];
