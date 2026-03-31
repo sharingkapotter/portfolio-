@@ -185,4 +185,11 @@ export const projects = [
   github: "https://github.com/sharingkapotter/jmeter-performance-framework",
   type: "Performance Testing",
   },
+  {
+  title: "API Security Testing Toolkit",
+  description: "Automated Python-based API security scanner targeting OWASP Top 10. Checks HTTP method tampering, SQL injection (21 payloads), authentication failures, and XSS reflection. Generates colored terminal output plus JSON and HTML scan reports.",
+  tech: ["Python", "OWASP Top 10", "SQLi", "XSS", "Auth Testing", "Jinja2", "REST API"],
+  github: "https://github.com/sharingkapotter/api-security-toolkit",
+  type: "AI Security",
+  },
 ];
