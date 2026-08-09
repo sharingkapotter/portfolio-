@@ -6,8 +6,8 @@ export default function Footer() {
     <footer className="border-t border-slate-200 mt-24">
       <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="font-display font-semibold text-gradient text-sm">Sunil Sodhi</div>
-        <p className="text-slate-600 text-xs font-body">
-          Senior SDET & QA Manager · Austin, TX
+        <p className="text-slate-600 text-xs font-body text-center">
+          AI Governance &amp; Risk · LLM Security · Model Validation · {profile.locationShort}
         </p>
         <div className="flex items-center gap-4">
           <a href={`mailto:${profile.email}`} className="text-slate-600 hover:text-accent transition-colors">

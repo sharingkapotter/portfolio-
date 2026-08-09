@@ -1,5 +1,11 @@
-import { Download, Briefcase, Code2, ChevronRight } from 'lucide-react';
-import { profile, experience, skills } from '../data/profile';
+import { Download, Briefcase, Code2, ChevronRight, ShieldCheck } from 'lucide-react';
+import { profile, experience, skills, frameworks } from '../data/profile';
+
+const trackStyles = {
+  governance: 'bg-violet-400 border-violet-500',
+  security: 'bg-rose-400 border-rose-500',
+  validation: 'bg-accent/40 border-accent/60',
+};
 
 export default function Resume() {
   return (
@@ -11,7 +17,8 @@ export default function Resume() {
           <div>
             <p className="font-mono text-accent text-xs mb-2 tracking-widest uppercase">Resume</p>
             <h1 className="font-display font-extrabold text-4xl text-slate-900 mb-2">{profile.name}</h1>
-            <p className="font-body text-slate-600">{profile.headline} · {profile.subheadline}</p>
+            <p className="font-body text-slate-600">{profile.headline}</p>
+            <p className="font-body text-slate-400 text-sm mt-1">{profile.location}</p>
           </div>
           <a
             href="/Sunil_Sodhi_Resume.pdf"
@@ -25,19 +32,43 @@ export default function Resume() {
         {/* Summary */}
         <section className="mb-14">
           <SectionTitle icon={<span className="text-accent">▸</span>} title="Professional Summary" />
-          <p className="font-body text-slate-600 leading-relaxed text-sm">{profile.summary}</p>
+          <div className="space-y-4">
+            {profile.summaryLong.split('\n\n').map((para, i) => (
+              <p key={i} className="font-body text-slate-600 leading-relaxed text-sm">
+                {para}
+              </p>
+            ))}
+          </div>
+        </section>
+
+        {/* Frameworks */}
+        <section className="mb-14">
+          <SectionTitle icon={<ShieldCheck size={15} className="text-accent" />} title="Frameworks & Standards" />
+          <div className="flex flex-wrap gap-2">
+            {frameworks.map((f) => (
+              <span
+                key={f}
+                className="px-3 py-1.5 rounded border border-accent/20 bg-accent/5 text-accent text-xs font-mono"
+              >
+                {f}
+              </span>
+            ))}
+          </div>
         </section>
 
         {/* Skills */}
         <section className="mb-14">
           <SectionTitle icon={<Code2 size={15} className="text-accent" />} title="Technical Skills" />
-          <div className="grid sm:grid-cols-2 gap-x-10 gap-y-4">
+          <div className="grid sm:grid-cols-2 gap-x-10 gap-y-5">
             {Object.entries(skills).map(([category, items]) => (
               <div key={category}>
                 <dt className="font-mono text-xs text-accent/80 mb-2 tracking-wide uppercase">{category}</dt>
                 <dd className="flex flex-wrap gap-1.5">
                   {items.map((item) => (
-                    <span key={item} className="px-2.5 py-1 rounded border border-slate-200 bg-slate-50 text-slate-700 text-xs font-mono">
+                    <span
+                      key={item}
+                      className="px-2.5 py-1 rounded border border-slate-200 bg-slate-50 text-slate-700 text-xs font-mono"
+                    >
                       {item}
                     </span>
                   ))}
@@ -58,12 +89,17 @@ export default function Resume() {
               {experience.map((job, i) => (
                 <article key={i} className="relative">
                   {/* Dot */}
-                  <div className="absolute -left-6 top-1.5 w-2 h-2 rounded-full bg-accent/40 border border-accent/60" />
+                  <div
+                    className={`absolute -left-6 top-1.5 w-2 h-2 rounded-full border ${
+                      trackStyles[job.track] || trackStyles.validation
+                    }`}
+                  />
 
                   <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-1 mb-3">
                     <div>
                       <h3 className="font-display font-semibold text-slate-900 text-base">{job.title}</h3>
-                      <p className="font-body text-accent text-sm">{job.company}
+                      <p className="font-body text-accent text-sm">
+                        {job.company}
                         {job.sub && <span className="text-slate-500 text-xs ml-2">· {job.sub}</span>}
                       </p>
                     </div>
@@ -86,6 +122,10 @@ export default function Resume() {
             </div>
           </div>
         </section>
+
+        <p className="font-body text-xs text-slate-400 mt-12 pt-6 border-t border-slate-200">
+          Current engagements are delivered under contract and clients are not named while active. Full detail available on request.
+        </p>
 
       </div>
     </main>

@@ -21,7 +21,7 @@ const contactLinks = [
     label: 'GitHub',
     value: 'github.com/sharingkapotter',
     href: profile.github,
-    desc: 'See my code',
+    desc: 'AI governance & security projects',
   },
   {
     icon: <Phone size={20} />,
@@ -40,9 +40,10 @@ export default function Contact() {
         <div className="mb-14">
           <p className="font-mono text-accent text-xs mb-2 tracking-widest uppercase">Get In Touch</p>
           <h1 className="font-display font-extrabold text-4xl text-slate-900 mb-4">Contact</h1>
-          <p className="font-body text-slate-500 text-sm max-w-xl">
-            I'm currently open to Senior SDET, QA Lead, and QA Manager opportunities.
-            Feel free to reach out via any of the channels below.
+          <p className="font-body text-slate-500 text-sm max-w-xl leading-relaxed">
+            Open to AI governance, AI risk, model validation and application security leadership roles —
+            New York, New Jersey or remote. Relocating to the NYC metro area in December 2026 and available
+            on site from January.
           </p>
         </div>
 
@@ -74,11 +75,14 @@ export default function Contact() {
         <div className="mt-12 p-8 rounded-xl border border-slate-200 bg-slate-50 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-accent/20 bg-accent/5 text-accent text-xs font-mono mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse inline-block" />
-            Available for new roles
+            NYC Metro · Relocating December 2026
           </div>
-          <h3 className="font-display font-semibold text-slate-900 mb-2">Let's build something together</h3>
-          <p className="font-body text-slate-500 text-sm max-w-sm mx-auto">
-            20 years of QA engineering experience across financial services, healthcare, insurance, and retail.
+          <h3 className="font-display font-semibold text-slate-900 mb-2">
+            If somebody has to decide whether a model is safe to ship
+          </h3>
+          <p className="font-body text-slate-500 text-sm max-w-md mx-auto leading-relaxed">
+            Twenty years of independent validation across insurance, banking, healthcare and retail — now applied
+            to AI risk, model validation and the controls that keep a system defensible after launch.
           </p>
         </div>
 
