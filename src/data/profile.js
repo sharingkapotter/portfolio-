@@ -316,6 +316,14 @@ export const projects = [
     featured: true,
   },
   {
+    title: "AI Risk Register",
+    description:
+      "Reusable AI risk register framework mapped to NIST AI RMF functions and EU AI Act obligations — risk identification, scoring, ownership, treatment and residual-risk tracking, structured for governance-committee review rather than as a spreadsheet afterthought.",
+    tech: ["NIST AI RMF", "EU AI Act", "Risk Register", "Risk Scoring", "Governance Reporting"],
+    github: "https://github.com/sharingkapotter/ai-risk-register",
+    type: "AI Governance",
+  },
+  {
     title: "LLM Security Assessment Suite",
     description:
       "Adversarial red-team harness running eight categories of injection against a deployed LLM assistant — direct and role-play prompt injection, instruction smuggling, indirect injection via retrieved data, prompt leaking, jailbreak, insecure output handling and data exfiltration — with severity scoring and PDF vulnerability reporting mapped to the OWASP Top 10 for LLM Applications and MITRE ATLAS.",
@@ -346,7 +354,7 @@ export const projects = [
     title: "AI Incident & Risk Dashboard",
     description:
       "Monitoring surface for bias, explainability and safety metrics across the model lifecycle, with incident logging structured for AI risk register intake and executive reporting.",
-    tech: ["Python", "AI Risk Register", "Bias Metrics", "Explainability", "Executive Reporting"],
+    tech: ["JavaScript", "AI Risk Register", "Bias Metrics", "Explainability", "Executive Reporting"],
     github: "https://github.com/sharingkapotter/ai-incident-risk-dashboard",
     type: "AI Governance",
   },
