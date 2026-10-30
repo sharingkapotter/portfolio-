@@ -42,8 +42,7 @@ export default function Contact() {
           <h1 className="font-display font-extrabold text-4xl text-slate-900 mb-4">Contact</h1>
           <p className="font-body text-slate-500 text-sm max-w-xl leading-relaxed">
             Open to AI governance, AI risk, model validation and application security leadership roles —
-            New York, New Jersey or remote. Relocating to the NYC metro area in December 2026 and available
-            on site from January.
+            based in Austin, Texas and open to remote.
           </p>
         </div>
 
@@ -75,7 +74,7 @@ export default function Contact() {
         <div className="mt-12 p-8 rounded-xl border border-slate-200 bg-slate-50 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-accent/20 bg-accent/5 text-accent text-xs font-mono mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse inline-block" />
-            NYC Metro · Relocating December 2026
+            Austin, TX · Open to Remote
           </div>
           <h3 className="font-display font-semibold text-slate-900 mb-2">
             If somebody has to decide whether a model is safe to ship
